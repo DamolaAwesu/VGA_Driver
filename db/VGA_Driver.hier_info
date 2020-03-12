@@ -1,0 +1,38 @@
+|VGA_Driver
+clk_main => Sync_Counter:C1.clk
+rst => Sync_Counter:C1.reset
+Hsync <= Sync_Counter:C1.hsync
+Vsync <= Sync_Counter:C1.vsync
+VGA_R[0] <= Sync_Counter:C1.r[0]
+VGA_R[1] <= Sync_Counter:C1.r[1]
+VGA_R[2] <= Sync_Counter:C1.r[2]
+VGA_R[3] <= Sync_Counter:C1.r[3]
+VGA_G[0] <= Sync_Counter:C1.g[0]
+VGA_G[1] <= Sync_Counter:C1.g[1]
+VGA_G[2] <= Sync_Counter:C1.g[2]
+VGA_G[3] <= Sync_Counter:C1.g[3]
+VGA_B[0] <= Sync_Counter:C1.b[0]
+VGA_B[1] <= Sync_Counter:C1.b[1]
+VGA_B[2] <= Sync_Counter:C1.b[2]
+VGA_B[3] <= Sync_Counter:C1.b[3]
+
+
+|VGA_Driver|Sync_Counter:C1
+clk => clk_25.CLK
+reset => clk_25.ACLR
+hsync <= hsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vsync <= vsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[0] <= display_en.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= display_en.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= display_en.DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= display_en.DB_MAX_OUTPUT_PORT_TYPE
+g[0] <= display_en.DB_MAX_OUTPUT_PORT_TYPE
+g[1] <= display_en.DB_MAX_OUTPUT_PORT_TYPE
+g[2] <= display_en.DB_MAX_OUTPUT_PORT_TYPE
+g[3] <= display_en.DB_MAX_OUTPUT_PORT_TYPE
+b[0] <= display_en.DB_MAX_OUTPUT_PORT_TYPE
+b[1] <= display_en.DB_MAX_OUTPUT_PORT_TYPE
+b[2] <= display_en.DB_MAX_OUTPUT_PORT_TYPE
+b[3] <= display_en.DB_MAX_OUTPUT_PORT_TYPE
+
+
